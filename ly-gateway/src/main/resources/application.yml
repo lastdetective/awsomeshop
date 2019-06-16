@@ -1,0 +1,34 @@
+server:
+  port: 10010
+spring:
+  application:
+    name: api-gateway
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:10086/eureka
+
+zuul:
+  prefix: /api
+  routes:
+    item-service: /item/**
+    upload-service:
+      path: /upload/**
+      serviceId: upload-service
+      strip-prefix: false
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 5000
+ribbon:
+  ConnectTimeout: 1000
+  ReadTimeout: 3500
+  # 不做重试
+  #
+  MaxAutoRetries: 0
+
+  MaxAutoRetiresNextServer: 0
