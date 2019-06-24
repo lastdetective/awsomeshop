@@ -1,6 +1,5 @@
 .idea
-/target/
-
+*/target
 .classpath
 .project
 .settings     
@@ -38,3 +37,4 @@ ehthumbs.db  
 Thumbs.db
 *.iml
 *.class
+upload
