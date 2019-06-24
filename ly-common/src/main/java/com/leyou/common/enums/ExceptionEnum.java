@@ -21,7 +21,12 @@ public enum ExceptionEnum {
     BRAND_SAVE_ERROR(500, "品牌保存失败"),
     UPLOAD_IMAGE_ERROR(500, "上传文件失败"),
     FILE_TYPE_ERROR(500, "文件类型错误"),
-    IAVALID_FILE(500, "无效的文件");
+    INVALID_FILE(500, "无效的文件"),
+    SAVE_GOODS_ERROR(500, "新增商品失败"),
+    SPEC_GROUP_NOT_FOUND(404, "没有找到项目的分类"),
+    CATEGORY_BRAND_NOT_FOUND(404, "当前商品分类下没有找到相应的品牌"),
+    SPEC_PARAM_NOT_FOUND(404, "没有找到项目的细类");
+
     /**
      * 状态码
      */

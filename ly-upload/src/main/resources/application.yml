@@ -15,3 +15,18 @@ eureka:
   instance:
     ip-address: 127.0.0.1
     prefer-ip-address: true
+fdfs:
+  so-timeout: 2500
+  connect-timeout: 600
+  thumb-image:
+    width: 60
+    height: 60
+  tracker-list:
+    - 192.168.155.128:22122
+ly:
+  upload:
+    baseUrl: http://image.awsomeshop.club/
+    allowTypes:
+      - image/png
+      - image/jpeg
+      - image/bmp

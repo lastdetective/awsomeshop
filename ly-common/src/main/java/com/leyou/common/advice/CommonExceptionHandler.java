@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class CommonExceptionHandler {
     @ExceptionHandler(LyExceptiion.class)
     public ResponseEntity<ExceptionResult> handleException(LyExceptiion e) {
-        return ResponseEntity.status(HttpStatus.OK)
+        return ResponseEntity.status(e.getExceptionEnum().getCode())
                 .body(new ExceptionResult(e.getExceptionEnum()));
     }
 }
